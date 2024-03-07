@@ -25,3 +25,31 @@ if (victory == 1){
 } else {
     console.log('HAI PERSO');
 }
+
+
+// EXTRA al meglio di 3
+// dichiarazione variabili contatore vittorie
+let userPoint = 0;
+let gamePoint = 0;
+
+// ciclo per le tre partite 
+for(let i = 0; i < 3;i++){
+    userNumber = Math.floor(Math.random() * 6) + 1; 
+    gameDealerNumber = Math.floor(Math.random() *6) + 1;
+
+    if (userNumber > gameDealerNumber ){        
+        userPoint++;
+    } else if (userNumber < gameDealerNumber){
+        gamePoint++;
+    } 
+
+    console.log('nella mano ' + (i+1) + ' il tuo numero è: ' + userNumber + '. Il numero del banco è: ' + gameDealerNumber + '.');
+}
+
+if (userPoint > gamePoint){
+    console.log ('HAI VINTO  ' + userPoint + ' a ' +gamePoint + '.');
+} else if (userPoint < gamePoint){
+    console.log('HAI PERSO ' + userPoint + ' a ' +gamePoint + '.');
+} else {
+    console.log('PAREGGIO ..incredibbbbile');
+}
